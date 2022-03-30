@@ -5,12 +5,14 @@ const Wraper = styled.header`
 display: flex;
 user-select: none;
 flex-direction: column;
-padding: 2em 2em 0;
-justify-content: center;
+padding: 2em 2em 0; 
+margin: 0 1em ;
+justify-content: center; 
 align-items: center;
 
 p{
-  font-size: .6rem;
+  font-size: .68rem;
+  margin-top: .5em; 
   font-weight: 600;
   white-space: nowrap; 
 }
