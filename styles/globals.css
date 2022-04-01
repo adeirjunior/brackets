@@ -25,6 +25,6 @@ a {
   text-decoration: none;
 } 
 * {
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent; 
   box-sizing: border-box;
 }
