@@ -21,14 +21,10 @@ textarea,
 button,
 select,
 a {
-  -webkit-tap-highlight-color: transparent;
-} 
-
-a {
   color: inherit;
   text-decoration: none;
-}
-
+} 
 * {
+  -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
 }

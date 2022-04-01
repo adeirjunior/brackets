@@ -6,7 +6,7 @@ display: flex;
 user-select: none;
 flex-direction: column;
 padding: 2em 2em 0; 
-margin: 0 1em ;
+margin: 0 1em ; 
 justify-content: center; 
 align-items: center;
 

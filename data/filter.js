@@ -1,6 +1,6 @@
 export const filterIcons = [
     {
-        alt: 'Svelte Icon',
+        alt: 'Javascript Icon',
         src: '/filter-icons/Javascript-Icon.svg'
     },
     {

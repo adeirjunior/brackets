@@ -4,14 +4,12 @@ const Wraper = styled.footer`
     color: #f1f1f1;
     background-color: #1C1C1C;
     width: 100%;
-    font-size: .85rem;
+    font-size: .85rem; 
     padding: 1.5em;
-    position: absolute;
-    bottom: 0;
 
     .github a, .coffee a{
         text-decoration: underline;
-        &:hover{
+        &:hover{  
             opacity: .7;
         }
     }
@@ -23,8 +21,8 @@ const Wraper = styled.footer`
 const Footer = () => {
     return (
         <Wraper>
-            <p className="github">Developed by <Link target="_blank" href="https://github.com/adeirjunior">Adeir Junior</Link></p>
-            <p className="coffee">He would like a <Link target="_blank" href="https://ko-fi.com/F1F45NX9N">Coffe</Link></p>
+            <p className="github">Developed by <Link href="https://github.com/adeirjunior">Adeir Junior</Link></p>
+            <p className="coffee">He would like a <Link href="https://ko-fi.com/F1F45NX9N">Coffe</Link></p>
         </Wraper>
     )
 }
