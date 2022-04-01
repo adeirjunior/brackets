@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0 maximun-scale-1.0 user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=no" />
         <link rel='icon' href='/bracketsIco.png' />
         <title>Brackets</title>
         <meta name="description" content="Place the meta description text here." />
