@@ -1,22 +1,27 @@
+import Javascript from '../public/post-icons/Javascript';
+import React from '../public/post-icons/React';
+import Next from '../public/post-icons/Next';
+import Svelte from '../public/post-icons/Svelte';
+
 export const PostsData = [
     {
         title: "Javascript Updates to ES11",
-        thumb:"javascript",
+        Thumb: () => < Javascript />,
+        type: "javascript"
     },
     {
         title: "React 17 Looks Really Nice",
-        thumb:"react",
+        Thumb: () => < React />,
+        type: "react"
     },
     {
         title: "Svelte Target Don’t Works Anymore",
-        thumb:"svelte",
+        Thumb: () => < Svelte />,
+        type: "svelte"
     },
     {
         title: "Next Updates Its Router",
-        thumb:"next",
-    },
-    {
-        title: "I Don't Use Angular",
-        thumb:"angular",
+        Thumb: () => < Next />,
+        type: "next"
     },
 ]

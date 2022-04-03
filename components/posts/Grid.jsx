@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import { PostsData } from '../../data/posts';
 
 const Wrap = styled.section`
-    display: grid;
-    place-content: center;
-    padding: 0 2em 2em;
-    h2::selection{
+    display: grid; 
+    place-content: center; 
+    padding: 0 2em 2em; 
+    h2::selection{ 
         background-color: #1C1C1C;
-        color: #F1F1F1;
+        color: #F1F1F1; 
     }
 `
 
@@ -20,7 +20,7 @@ const Grid = () => {
             {
                 PostsData.map((post, key) => {
                     return (
-                            <Cards key={key} title={post.title} src={post.src} thumb={post.thumb} />
+                            <Cards key={key} title={post.title} Thumb={post.Thumb} type={post.type} />
                         
                     )
                 })

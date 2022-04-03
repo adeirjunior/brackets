@@ -1,23 +1,29 @@
+import Javascript from '../public/filter-icons/Javascript-Icon';
+import React from '../public/filter-icons/React-Icon';
+import Next from '../public/filter-icons/Next-Icon';
+import Angular from '../public/filter-icons/Angular-Icon';
+import Svelte from '../public/filter-icons/Svelte-Icon';
+
 export const filterIcons = [
     {
         alt: 'Javascript Icon',
-        src: '/filter-icons/Javascript-Icon.svg'
+        Src: () => < Javascript />,
     },
     {
         alt: 'React Icon',
-        src: '/filter-icons/React-Icon.svg'
+        Src: () => < React />,
     },
     {
         alt: 'Next Icon',
-        src: '/filter-icons/Next-Icon.svg'
+        Src: () => < Next />,
     },
     {
         alt: 'Angular Icon',
-        src: '/filter-icons/Angular-Icon.svg'
+        Src: () => < Angular />,
     },
     {
         alt: 'Svelte Icon',
-        src: '/filter-icons/Svelte-Icon.svg'
+        Src: () => < Svelte />,
     },
     
-]
+];

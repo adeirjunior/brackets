@@ -1,4 +1,4 @@
-import Image from 'next/image';
+
 import { filterIcons } from '../../data/filter';
 import styled from 'styled-components';
 
@@ -8,18 +8,26 @@ const Wraper = styled.div`
   gap: .25em; 
   grid-template-columns: repeat(5,3em); 
   margin: 3em 2em 0; 
-  place-content: center;    
+  place-content: center;  
+
+  svg{
+    cursor: pointer;
+    transition: all .3s;
+
+    &:active{
+      opacity: .75;
+      transform:scale(.92) ;
+    }
+  }
 `
 
 const Filter = () => {
   return (
     <Wraper>
     {
-        filterIcons.map((filterIcon, key) => {
+        filterIcons.map((FilterIcon, key) => {
             return (
-              <button key={key}>
-                <Image className='transition-all active:scale-95 active:opacity-80 cursor-pointer' width={38} height={38} alt={filterIcon.alt} src={filterIcon.src}/>
-              </button>   
+              <FilterIcon.Src key={key} />
             )
         })
     }

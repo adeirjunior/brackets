@@ -3,9 +3,9 @@ import Link from "next/link";
 const Wraper = styled.footer`
     color: #f1f1f1;
     background-color: #1C1C1C;
-    width: 100%;
-    font-size: .85rem; 
-    padding: 1.5em;
+    width: 100%; 
+    font-size: .85rem;
+    padding: 1.5em;  
 
     .github a, .coffee a{
         text-decoration: underline;

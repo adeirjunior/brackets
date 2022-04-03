@@ -1,11 +1,12 @@
 import Image from "next/image";
 import styled from "styled-components";
+import Brackets from "../public/brackets";
 
 const Wraper = styled.header`
-display: flex;
+display: flex; 
 user-select: none;
-flex-direction: column;
-padding: 2em 2em 0; 
+flex-direction: column; 
+padding: 2em 2em 0;  
 margin: 0 1em ; 
 justify-content: center; 
 align-items: center;
@@ -21,7 +22,7 @@ p{
 const Header = () => {
   return (
     <Wraper>
-        <Image width={400}  height={80} src='/brackets.svg' alt="Brackets Logo"/>
+        <Brackets className=""/>
         <p>important news for short time web devs</p>
     </Wraper>
   )

@@ -3,10 +3,10 @@ import styled from "styled-components";
 const TextInput = styled.div`
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: center;  
   margin-bottom: 3.5em;
 
-  input{
+  input{ 
     margin-top: 3em;  
     border: 1px solid #1e1e1e;
     border-radius: .4em;

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Image from "next/image";
 
 const Card = styled.div`
     width: 100%;
@@ -9,7 +8,9 @@ const Card = styled.div`
     &:not(:last-child){
         margin-bottom: 2em;
     }
-
+    &:hover .cardImage svg{
+        transform: scale(.96);
+    }
     .cardImage{
         display: flex;
         color: #F1F1F1;
@@ -18,9 +19,15 @@ const Card = styled.div`
         min-height: 150px;
         border-radius: 1em;
         justify-content: center;
+        align-items: center;
         background-color: #1E1E1E;
         margin-bottom: .5em;
-        user-select: none;
+        user-select: none; 
+
+        svg{
+            transition: all .3s;
+        }
+
     }
     .title{
         font-size: .85rem;
@@ -34,18 +41,17 @@ const Card = styled.div`
 
 `;
 
-const Cards = ({title, thumb}) => {
-    const src = `/post-icons/${thumb}.svg`;
+const Cards = ({title, type, Thumb}) => {
 
     return (
         <Card className="group">
             <div className="cardImage">
                 {
-                thumb === "javascript" ? (<Image className="transition-all duration-200 group-hover:scale-95" width={50} height={50} alt={title}src={src}/>) 
-                :thumb === "next" ? (<Image className="transition-all duration-200 group-hover:scale-95" width={50} height={50} alt={title}src={src}/>)
-                :thumb === "react" ? (<Image className="transition-all duration-200 group-hover:scale-95" width={60} height={60} alt={title}src={src}/>)
-                :thumb === "angular" ? (<Image className="transition-all duration-200 group-hover:scale-95" width={50} height={50} alt={title}src={src}/>)
-                :thumb === "svelte" ? (<Image className="transition-all duration-200 group-hover:scale-95" width={50} height={50} alt={title}src={src}/>)
+                type === "javascript" ? (<Thumb className="transition-all duration-200 group-hover:scale-95" />) 
+                :type === "next" ? (<Thumb className="transition-all duration-200 group-hover:scale-95" />)
+                :type === "react" ? (<Thumb className="transition-all duration-200 group-hover:scale-95" />)
+                :type === "angular" ? (<Thumb className="transition-all duration-200 group-hover:scale-95" />)
+                :type === "svelte" ? (<Thumb className="transition-all duration-200 group-hover:scale-95" />)
                 :""
                 }
             </div>
