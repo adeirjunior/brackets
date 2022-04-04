@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const TextInput = styled.div`
-  width: 100%;
+  width: 100%; 
   display: flex;
   justify-content: center;  
   margin-bottom: 3.5em;

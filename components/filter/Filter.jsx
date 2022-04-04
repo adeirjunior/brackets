@@ -4,11 +4,12 @@ import styled from 'styled-components';
 
 const Wraper = styled.div`
   display: grid;
-  user-select: none;
+  user-select: none; 
   gap: .25em; 
   grid-template-columns: repeat(5,3em); 
-  margin: 3em 2em 0; 
-  place-content: center;  
+  margin-top: 3em; 
+  place-content: center;
+  justify-items: center;
 
   svg{
     cursor: pointer;
@@ -26,9 +27,9 @@ const Filter = () => {
     <Wraper>
     {
         filterIcons.map((FilterIcon, key) => {
-            return (
-              <FilterIcon.Src key={key} />
-            )
+          return (
+            <FilterIcon.Src key={key} />
+          )
         })
     }
     </Wraper>

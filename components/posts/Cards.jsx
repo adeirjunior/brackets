@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "next/dist/client/link";
 
 const Card = styled.div`
     width: 100%;
@@ -35,30 +36,32 @@ const Card = styled.div`
 
         &::selection{
             background-color: #1C1C1C;
-            color: #f1f1f1;
+            color: #f1f1f1; 
         }
     }
 
 `;
 
-const Cards = ({title, type, Thumb}) => {
+const Cards = ({title, type, Thumb, id}) => {
 
     return (
-        <Card className="group">
-            <div className="cardImage">
-                {
-                type === "javascript" ? (<Thumb className="transition-all duration-200 group-hover:scale-95" />) 
-                :type === "next" ? (<Thumb className="transition-all duration-200 group-hover:scale-95" />)
-                :type === "react" ? (<Thumb className="transition-all duration-200 group-hover:scale-95" />)
-                :type === "angular" ? (<Thumb className="transition-all duration-200 group-hover:scale-95" />)
-                :type === "svelte" ? (<Thumb className="transition-all duration-200 group-hover:scale-95" />)
-                :""
-                }
-            </div>
-            <h3 className="title">
-                {title}
-            </h3>
-        </Card>
+        <Link href={`/posts/${id}`}>
+            <Card className="group">
+                <div className="cardImage">
+                    {
+                    type === "javascript" ? (<Thumb className="transition-all duration-200 group-hover:scale-95" />) 
+                    :type === "next" ? (<Thumb className="transition-all duration-200 group-hover:scale-95" />)
+                    :type === "react" ? (<Thumb className="transition-all duration-200 group-hover:scale-95" />)
+                    :type === "angular" ? (<Thumb className="transition-all duration-200 group-hover:scale-95" />)
+                    :type === "svelte" ? (<Thumb className="transition-all duration-200 group-hover:scale-95" />)
+                    :""
+                    }
+                </div>
+                <h3 className="title">
+                    {title}
+                </h3>
+            </Card>
+        </Link>
     )
 }
 

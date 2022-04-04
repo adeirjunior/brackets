@@ -8,9 +8,12 @@ user-select: none;
 flex-direction: column; 
 padding: 2em 2em 0;  
 margin: 0 1em ; 
-justify-content: center; 
+justify-content: center;  
 align-items: center;
-
+svg{
+  width: 12rem;
+  height: auto;
+}
 p{
   font-size: .68rem;
   margin-top: .5em; 
@@ -22,7 +25,7 @@ p{
 const Header = () => {
   return (
     <Wraper>
-        <Brackets className=""/>
+        <Brackets/>
         <p>important news for short time web devs</p>
     </Wraper>
   )
