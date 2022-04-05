@@ -24,4 +24,19 @@ export const PostsData = [
         Thumb: () => < Next />,
         type: "next",
     },
+    {
+        title: "Next Updates Its Router",
+        Thumb: () => < Next />,
+        type: "next",
+    },
+    {
+        title: "Svelte Target Don’t Works Anymore",
+        Thumb: () => < Svelte />,
+        type: "svelte",
+    },
+    {
+        title: "Javascript Updates to ES11",
+        Thumb: () => < Javascript />,
+        type: "javascript",
+    },
 ]

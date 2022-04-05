@@ -43,7 +43,6 @@ const Card = styled.div`
 `;
 
 const Cards = ({title, type, Thumb, id}) => {
-
     return (
         <Link href={`/posts/${id}`}>
             <Card className="group">

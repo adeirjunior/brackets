@@ -25,7 +25,7 @@ const Grid = () => {
             {
                 PostsData.map((post, key) => {
                     return (
-                        <Cards key={key} id={key} title={post.title} Thumb={post.Thumb} type={post.type} />
+                        <Cards key={key} id={key + 1} title={post.title} Thumb={post.Thumb} type={post.type} />
                     )
                 })
             }
