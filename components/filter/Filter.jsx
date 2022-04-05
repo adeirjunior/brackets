@@ -3,7 +3,8 @@ import { filterIcons } from '../../data/filter';
 import styled from 'styled-components';
 
 const Wraper = styled.div`
-  display: grid;
+  transition: all;
+  display: grid; 
   user-select: none; 
   gap: .25em; 
   grid-template-columns: repeat(5,3em); 
@@ -20,6 +21,20 @@ const Wraper = styled.div`
       transform:scale(.92) ;
     }
   }
+
+@media only screen and (min-width:  640px) {
+  gap: 1.25em;
+  svg{
+    width: 2.75em;
+    height: auto;
+  }
+}
+@media only screen and (min-width:  960px) {
+ 
+}
+@media only screen and (min-width:  1440px) {
+ 
+}
 `
 
 const Filter = () => {

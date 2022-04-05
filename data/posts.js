@@ -7,21 +7,21 @@ export const PostsData = [
     {
         title: "Javascript Updates to ES11",
         Thumb: () => < Javascript />,
-        type: "javascript"
+        type: "javascript",
     },
     {
         title: "React 17 Looks Really Nice",
         Thumb: () => < React />,
-        type: "react"
+        type: "react",
     },
     {
         title: "Svelte Target Don’t Works Anymore",
         Thumb: () => < Svelte />,
-        type: "svelte"
+        type: "svelte",
     },
     {
         title: "Next Updates Its Router",
         Thumb: () => < Next />,
-        type: "next"
+        type: "next",
     },
 ]

@@ -3,7 +3,7 @@ import styled from "styled-components";
 const TextInput = styled.div`
   width: 100%; 
   display: flex;
-  justify-content: center;  
+  justify-content: center;
   margin-bottom: 3.5em;
 
   input{ 
@@ -28,6 +28,17 @@ const TextInput = styled.div`
         color: #F1F1F1;
       }
   }
+@media only screen and (min-width:  640px) {
+  input{
+    width: 20em;
+  }
+}
+@media only screen and (min-width:  960px) {
+ 
+}
+@media only screen and (min-width:  1440px) {
+ 
+}
 `
 
 function Search() {

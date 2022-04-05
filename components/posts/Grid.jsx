@@ -3,20 +3,25 @@ import styled from 'styled-components';
 import { PostsData } from '../../data/posts';
 
 const Wrap = styled.section`
-    display: grid; 
-    place-content: center; 
-    padding: 0 2em 2em;  
-    h2::selection{ 
-        background-color: #1C1C1C;
-        color: #F1F1F1; 
-    }
+    display: grid;
+    place-content: center;
+    padding: 0 1em;
+    gap: 2em;
+@media only screen and (min-width:  640px) {
+  grid-template-columns: repeat(2,280px);
+}
+@media only screen and (min-width:  960px) {
+  grid-template-columns: repeat(3,280px);
+}
+@media only screen and (min-width:  1440px) {
+}
 `
 
 const Grid = () => {
     return (
         <>
-            <Wrap>
-                <h2 className='text-center mb-6 text-sm font-semibold'>Today News</h2>
+            <h2 className='text-center mb-10 text-sm font-semibold selection:text-light selection:bg-dark'>Today News</h2>
+            <Wrap>   
             {
                 PostsData.map((post, key) => {
                     return (
@@ -24,8 +29,8 @@ const Grid = () => {
                     )
                 })
             }
-                <h2 className='text-center mt-6 text-sm font-semibold'>Other News</h2>
             </Wrap>
+            <h2 className='text-center mt-10 text-sm font-semibold selection:text-light selection:bg-dark'>Other News</h2>
         </>
     )
 }

@@ -18,7 +18,20 @@ p{
   font-size: .68rem;
   margin-top: .5em; 
   font-weight: 600;
-  white-space: nowrap; 
+  white-space: nowrap;
+}
+@media only screen and (min-width:  640px) {
+  svg{
+    width: 16em;
+  }
+  p{
+    font-size: .9rem;
+  }
+}
+@media only screen and (min-width:  960px) {
+}
+@media only screen and (min-width:  1440px) {
+ 
 }
 `;
 

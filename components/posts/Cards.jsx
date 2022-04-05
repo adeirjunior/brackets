@@ -6,9 +6,6 @@ const Card = styled.div`
     height: auto;
     cursor: pointer;
 
-    &:not(:last-child){
-        margin-bottom: 2em;
-    }
     &:hover .cardImage svg{
         transform: scale(.96);
     }
@@ -26,20 +23,23 @@ const Card = styled.div`
         user-select: none; 
 
         svg{
-            transition: all .3s;
+            transition: all .3s; 
         }
 
     }
     .title{
         font-size: .85rem;
         font-weight: 500;
-
-        &::selection{
-            background-color: #1C1C1C;
-            color: #f1f1f1; 
-        }
     }
-
+@media only screen and (min-width:  640px) {
+   
+}
+@media only screen and (min-width:  960px) {
+  
+}
+@media only screen and (min-width:  1440px) {
+  
+}
 `;
 
 const Cards = ({title, type, Thumb, id}) => {
@@ -57,7 +57,7 @@ const Cards = ({title, type, Thumb, id}) => {
                     :""
                     }
                 </div>
-                <h3 className="title">
+                <h3 className="title text-dark selection:bg-dark selection:text-light">
                     {title}
                 </h3>
             </Card>
