@@ -1,46 +1,11 @@
-import Image from "next/image";
-import styled from "styled-components";
 import Brackets from "../public/brackets";
-
-const Wraper = styled.header`
-display: flex; 
-user-select: none;
-flex-direction: column; 
-padding: 2em 2em 0;  
-margin: 0 1em ; 
-justify-content: center;  
-align-items: center;
-svg{
-  width: 12rem;
-  height: auto;
-}
-p{
-  font-size: .68rem;
-  margin-top: .5em; 
-  font-weight: 600;
-  white-space: nowrap;
-}
-@media only screen and (min-width:  640px) {
-  svg{
-    width: 16em;
-  }
-  p{
-    font-size: .9rem;
-  }
-}
-@media only screen and (min-width:  960px) {
-}
-@media only screen and (min-width:  1440px) {
- 
-}
-`;
 
 const Header = () => {
   return (
-    <Wraper>
-        <Brackets/>
-        <p>important news for short time web devs</p>
-    </Wraper>
+    <header className='flex pt-8 px-8 select-none flex-col mx-4 justify-center items-center'>
+        <Brackets className="w-48 h-auto sm:w-64"/>
+        <p className="mt-2 whitespace-nowrap text-xs font-semibold sm:text-sm">important news for short time web devs</p>
+    </header>
   )
 }
 

@@ -1,7 +1,11 @@
+import Link from 'next/link';
 
-function Posts() {
+const Posts = () => {
   return (
+    <>
+    <Link href="/">Home</Link>
     <div>Posts Grid</div>
+    </>
   )
 }
 

@@ -6,27 +6,27 @@ import Svelte from '../public/post-icons/Svelte';
 export const PostsData = [
     {
         title: "Javascript Updates to ES11",
-        Thumb: () => < Javascript />,
+        Thumb: ({className}) => < Javascript className={className}/>,
         type: "javascript",
     },
     {
-        title: "React 17 Looks Really Nice",
-        Thumb: () => < React />,
+        title: "React 18 Looks Really Nice",
+        Thumb: ({className}) => < React className={className}/>,
         type: "react",
     },
     {
         title: "Svelte Target Don’t Works Anymore",
-        Thumb: () => < Svelte />,
+        Thumb: ({className}) => < Svelte className={className}/>,
         type: "svelte",
     },
     {
         title: "Next Updates Its Router",
-        Thumb: () => < Next />,
+        Thumb: ({className}) => < Next className={className}/>,
         type: "next",
     },
     {
         title: "Next Updates Its Router",
-        Thumb: () => < Next />,
+        Thumb: ({className}) => < Next className={className}/>,
         type: "next",
     },
     {
@@ -38,5 +38,10 @@ export const PostsData = [
         title: "Javascript Updates to ES11",
         Thumb: () => < Javascript />,
         type: "javascript",
+    },
+    {
+        title: "React 18 Looks Really Nice",
+        Thumb: () => < React />,
+        type: "react",
     },
 ]

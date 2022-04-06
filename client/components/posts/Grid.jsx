@@ -1,27 +1,12 @@
 import Cards from './Cards';
-import styled from 'styled-components';
+import Link from 'next/link';
 import { PostsData } from '../../data/posts';
-
-const Wrap = styled.section`
-    display: grid;
-    place-content: center;
-    padding: 0 1em;
-    gap: 2em;
-@media only screen and (min-width:  640px) {
-  grid-template-columns: repeat(2,280px);
-}
-@media only screen and (min-width:  960px) {
-  grid-template-columns: repeat(3,280px);
-}
-@media only screen and (min-width:  1440px) {
-}
-`
 
 const Grid = () => {
     return (
         <>
             <h2 className='text-center mb-10 text-sm font-semibold selection:text-light selection:bg-dark'>Today News</h2>
-            <Wrap>   
+            <section className='grid place-content-center px-4 gap-8 sm:grid-cols-2col lg:grid-cols-3col xl:grid-cols-4col'>   
             {
                 PostsData.map((post, key) => {
                     return (
@@ -29,8 +14,8 @@ const Grid = () => {
                     )
                 })
             }
-            </Wrap>
-            <h2 className='text-center mt-10 text-sm font-semibold selection:text-light selection:bg-dark'>Other News</h2>
+            </section>
+            <h2 className='text-center mt-10 text-sm font-semibold selection:text-light selection:bg-dark'><Link href="/posts" >Other News</Link></h2>
         </>
     )
 }

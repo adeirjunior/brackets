@@ -1,51 +1,10 @@
-import styled from "styled-components";
 
-const TextInput = styled.div`
-  width: 100%; 
-  display: flex;
-  justify-content: center;
-  margin-bottom: 3.5em;
-
-  input{ 
-    margin-top: 3em;  
-    border: 1px solid #1e1e1e;
-    border-radius: .4em;
-    width: 15.5em; 
-    font-size: .7rem;
-    font-weight: 500; 
-    background-color: #F1F1F1;
-    padding: .4em 1.5em;
-    padding-left: 1em;
-
-      &::placeholder{
-      color: #1e1e1e;
-      }
-      &:focus{
-        outline: 0;
-      }
-      &::selection{
-        background-color: #1C1C1C;
-        color: #F1F1F1;
-      }
-  }
-@media only screen and (min-width:  640px) {
-  input{
-    width: 20em;
-  }
-}
-@media only screen and (min-width:  960px) {
- 
-}
-@media only screen and (min-width:  1440px) {
- 
-}
-`
 
 function Search() {
   return (
-    <TextInput>
-        <input type='text' placeholder="Search..." />
-    </TextInput>
+    <div className="flex w-auto justify-center mb-14">
+        <input className="mt-12 w-60 sm:w-80 font-medium text-xs border-dark border border-solid rounded-md py-2 pl-6 pr-4 bg-light placeholder:text-dark focus:outline-none selection:bg-dark selection:text-light" type='text' placeholder="Search..." />
+    </div>
   )
 }
 

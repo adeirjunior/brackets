@@ -7,23 +7,23 @@ import Svelte from '../public/filter-icons/Svelte-Icon';
 export const filterIcons = [
     {
         alt: 'Javascript Icon',
-        Src: () => < Javascript />,
+        Src: ({className}) => < Javascript className={className}/>,
     },
     {
         alt: 'React Icon',
-        Src: () => < React />,
+        Src: ({className}) => < React className={className}/>,
     },
     {
         alt: 'Next Icon',
-        Src: () => < Next />,
+        Src: ({className}) => < Next className={className}/>,
     },
     {
         alt: 'Angular Icon',
-        Src: () => < Angular />,
+        Src: ({className}) => < Angular className={className}/>,
     },
     {
         alt: 'Svelte Icon',
-        Src: () => < Svelte />,
+        Src: ({className}) => < Svelte className={className}/>,
     },
     
 ];
