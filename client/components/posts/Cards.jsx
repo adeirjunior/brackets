@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Cards = ({title, type, Thumb, id}) => {
     return (
-        <Link href={`/posts/${id}`}>
+        <Link passHref href={`/posts/${id}`}>
             <div className="group w-52 sm:w-72 text-light cursor-pointer">
                 <div className="cardImage  h-40 bg-dark mb-2 flex rounded-2xl items-center justify-center">
                     {
