@@ -42,6 +42,7 @@ position: relative;
     div {
       text-align: justify;
       max-width: 1000px;
+      min-width: 0;
       line-height: 1.5em;
       font-weight: 500;
       font-size: 1.2rem;
@@ -56,8 +57,9 @@ position: relative;
         margin: 3em 0;
         background-color: #1C1C1C;
         border-radius: 3em;
-        padding: 1.5em;
+        padding: 2em;
         cursor: pointer;
+        text-align: left;
 
         &:hover code {
             background-color: #F1F1F1;
@@ -67,6 +69,7 @@ position: relative;
         code {
           color: #F1F1F1;
           user-select: none;
+          white-space: pre-line;
         }
       }
     }
