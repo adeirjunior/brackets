@@ -16,7 +16,7 @@ const Post = ({
         </Head>
         
         <div>
-          <Link href="/"><button>Home</button></Link>
+          <Link href="/" passHref><button>Home</button></Link>
           <h2>Post: {title}</h2>
           <section dangerouslySetInnerHTML={
             {

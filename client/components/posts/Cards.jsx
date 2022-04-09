@@ -13,7 +13,6 @@ const Cards = ({ post }) => {
                     post.frontmatter.cover_image === "javascript" ? (<Javascript className="transition-all duration-200 group-hover:scale-95" />) 
                     :post.frontmatter.cover_image === "next" ? (<Next className="transition-all duration-200 group-hover:scale-95" />)
                     :post.frontmatter.cover_image === "react" ? (<React className="transition-all duration-200 group-hover:scale-95" />)
-                    :post.frontmatter.cover_image === "angular" ? (<Thumb className="transition-all duration-200 group-hover:scale-95" />)
                     :post.frontmatter.cover_image === "svelte" ? (<Svelte className="transition-all duration-200 group-hover:scale-95" />)
                     :""
                     }
