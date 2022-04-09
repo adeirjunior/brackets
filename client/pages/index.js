@@ -1,38 +1,19 @@
 import Head from 'next/head';
 import Filter from '../components/filter/Filter';
 import Header from '../components/Header';
-import Footer from '../components/Footer';
 import Search from '../components/filter/Search';
-import Grid from '../components/posts/Grid';
-import NoScript from '../public/noscriptIcon';
+import Cards from '../components/posts/Cards';
+import Link from 'next/link';
+import fs from 'fs';
+import { join } from 'path';
+import matter from 'gray-matter';
+import { sortByDate } from '../utils';
+import NoscriptCode from '../components/NoscriptCode';
 
-const Home = () => {
+const Home = ({ posts }) => {
   return (
     <>
-      <noscript>
-        <div id='noscript'>
-        <Head>
-          <link rel='stylesheet' type='text/css' href='/stylesheet/noscript.css' />
-        </Head>
-          <div id='noscript-body'>
-            <NoScript />
-            <p id='noscript-text'>
-              this site needs
-              <span> </span>
-              <span>J</span>
-              <span>a</span>
-              <span>v</span>
-              <span>a</span>
-              <span>s</span>
-              <span>c</span>
-              <span>r</span>
-              <span>i</span>
-              <span>p</span>
-              <span>t</span>
-            </p>
-          </div>
-        </div>
-      </noscript>
+      <NoscriptCode />
       <div>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=no" />
@@ -43,11 +24,42 @@ const Home = () => {
         <Header />
         <Filter />
         <Search />
-        <Grid />
-        <Footer />
+        <h2 className='text-center mb-10 text-sm font-semibold selection:text-light selection:bg-dark'>Today News</h2>
+        <section className='grid place-content-center px-4 gap-8 sm:grid-cols-2col lg:grid-cols-3col xl:grid-cols-4col'>   
+        {
+            posts.map((post, index) => {
+                return (
+                    <Cards key={index} post={post} />
+                )
+            })
+        }
+        </section>
+        <h2 className='text-center mt-10 text-sm font-semibold selection:text-light selection:bg-dark'><Link href="/posts" >Other News</Link></h2>
       </div>
     </>
   )
 }
 
 export default Home;
+
+export async function getStaticProps() {
+  const files = fs.readdirSync(join('posts'));
+
+  const posts = files.map((filename) => {
+    const slug = filename.replace('.md', '');
+
+    const markdownWithMeta = fs.readFileSync(join('posts', filename), 'utf-8');
+
+    const {data:frontmatter} = matter(markdownWithMeta);
+
+    return {
+      slug,
+      frontmatter
+    }
+  })
+  return {
+    props: {
+      posts: posts.sort(sortByDate)
+    }
+  }
+}

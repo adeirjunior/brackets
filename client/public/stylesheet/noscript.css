@@ -40,7 +40,6 @@
 #noscript span{
     font-size: 6rem;
     font-weight: 700;
-    cursor: default;
 }
 #noscript span:hover{
     color: #333333;
