@@ -70,6 +70,7 @@ position: relative;
           color: #F1F1F1;
           user-select: none;
           white-space: pre-line;
+          word-wrap: break-word;
         }
       }
     }
