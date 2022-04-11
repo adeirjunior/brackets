@@ -1,13 +1,12 @@
 import '../styles/globals.css';
 import Footer from '../components/Footer';
-import { ScrollerMotion } from 'scroller-motion';
+import NoscriptCode from '../components/NoscriptCode';
 
 function MyApp({ Component, pageProps }) {
   return <>
-  <ScrollerMotion spring={{ mass: 1.25, stiffness: 225, damping: 30 }}>
+    <NoscriptCode />
     <Component {...pageProps} />
     <Footer />
-  </ScrollerMotion>
   </>
 }
 

@@ -8,12 +8,11 @@ import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
 import { sortByDate } from '../utils';
-import NoscriptCode from '../components/NoscriptCode';
+
 
 const Home = ({ posts }) => {
   return (
     <>
-      <NoscriptCode />
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=no" />
         <link rel='icon' href='/bracketsIco.png' />
