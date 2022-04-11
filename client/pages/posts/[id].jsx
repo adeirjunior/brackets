@@ -22,6 +22,11 @@ position: relative;
       font-weight: 600;
       text-transform: uppercase;
       user-select: none;
+
+      &:hover{
+        color: #F1F1F1;
+        background-color: transparent;
+      }
     } 
     h2 {
       padding: 1.5em 0 2.5em;
