@@ -48,10 +48,22 @@ position: relative;
       font-size: 1.2rem;
       letter-spacing: .05em;
 
-      p::selection {
+      p::selection, h3::selection, strong::selection {
         background-color: #1C1C1C;
         color: #F1F1F1;
       }
+      h3{
+        font-size: 1.5rem;
+        margin-bottom: .5em;
+        font-weight: 600;
+      }
+      p{
+        
+        &:not(:last-child){
+          margin-bottom: 1em;
+        }
+      }
+    }
 
       pre {
         margin: 3em 0;
@@ -59,7 +71,7 @@ position: relative;
         border-radius: 3em;
         padding: 2em;
         cursor: pointer;
-        text-align: left;
+        text-align: left; 
 
         &:hover code {
             background-color: #F1F1F1;
