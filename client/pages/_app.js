@@ -4,7 +4,7 @@ import { ScrollerMotion } from 'scroller-motion';
 
 function MyApp({ Component, pageProps }) {
   return <>
-  <ScrollerMotion spring={{ mass: 1, stiffness: 225, damping: 30 }}>
+  <ScrollerMotion spring={{ mass: 1.25, stiffness: 225, damping: 30 }}>
     <Component {...pageProps} />
     <Footer />
   </ScrollerMotion>

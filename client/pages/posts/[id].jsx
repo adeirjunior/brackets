@@ -94,6 +94,13 @@ position: relative;
     font-weight: 500;
     bottom: -2.5em;
   }
+
+@media only screen and (max-width: 1000px) {
+  pre {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+}
 `
 
 const Post = ({
