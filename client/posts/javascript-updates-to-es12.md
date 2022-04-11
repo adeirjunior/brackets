@@ -1,7 +1,7 @@
 ---
 title: 'Javascript Updates to es12'
 date: '04/12/2022'
-cover_image: 'javascript'
+programming_language: 'javascript'
 ---
 As a programmer we can only put the best performant code to the project when we know what new APIs recently introduced in the technology which is being used into the project.
 

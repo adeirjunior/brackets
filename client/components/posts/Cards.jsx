@@ -10,10 +10,10 @@ const Cards = ({ post }) => {
             <div className="group w-52 sm:w-72 text-light cursor-pointer">
                 <div className="cardImage  h-40 bg-dark mb-2 flex rounded-2xl items-center justify-center">
                     {
-                    post.frontmatter.cover_image === "javascript" ? (<Javascript className="transition-all duration-200 group-hover:scale-95" />) 
-                    :post.frontmatter.cover_image === "next" ? (<Next className="transition-all duration-200 group-hover:scale-95" />)
-                    :post.frontmatter.cover_image === "react" ? (<React className="transition-all duration-200 group-hover:scale-95" />)
-                    :post.frontmatter.cover_image === "svelte" ? (<Svelte className="transition-all duration-200 group-hover:scale-95" />)
+                    post.frontmatter.programming_language === "javascript" ? (<Javascript className="transition-all duration-200 group-hover:scale-95" />) 
+                    :post.frontmatter.programming_language === "next" ? (<Next className="transition-all duration-200 group-hover:scale-95" />)
+                    :post.frontmatter.programming_language === "react" ? (<React className="transition-all duration-200 group-hover:scale-95" />)
+                    :post.frontmatter.programming_language === "svelte" ? (<Svelte className="transition-all duration-200 group-hover:scale-95" />)
                     :""
                     }
                 </div>

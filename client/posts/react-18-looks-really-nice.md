@@ -1,7 +1,7 @@
 ---
 title: 'React 18 Looks Really Nice'
 date: '04/08/2022'
-cover_image: 'react'
+programming_language: 'react'
 ---
 
 ## React 18 Looks Really Nice

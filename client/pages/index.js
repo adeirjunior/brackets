@@ -11,6 +11,8 @@ import { sortByDate } from '../utils';
 
 
 const Home = ({ posts }) => {
+  const postsFilter = posts.filter( post => post.frontmatter.programming_language === 'javascript' );
+  console.log(postsFilter);
   return (
     <>
       <Head>
@@ -26,11 +28,13 @@ const Home = ({ posts }) => {
         <h2 className='text-center mb-10 text-sm font-semibold selection:text-light selection:bg-dark'>Today News</h2>
         <section className='grid place-content-center px-4 gap-8 sm:grid-cols-2col lg:grid-cols-3col xl:grid-cols-4col'>   
         {
-            posts.map((post, index) => {
-                return (
-                    <Cards key={index} post={post} />
-                )
-            })
+          postsFilter[0]?.frontmatter ? 
+          ( 
+            postsFilter.map((post, index) => <Cards key={index} post={post} />)
+          ) : 
+          (
+            posts.map((post, index) => <Cards key={index} post={post} />)
+          )
         }
         </section>
         <h2 className='text-center mt-10 text-sm font-semibold selection:text-light selection:bg-dark'><Link href="/posts" >Other News</Link></h2>

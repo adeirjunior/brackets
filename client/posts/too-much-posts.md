@@ -1,7 +1,7 @@
 ---
 title: 'Too Much Posts'
 date: '04/10/2022'
-cover_image: 'javascript'
+programming_language: 'javascript'
 ---
 
 ## Javascript Updates to es12
