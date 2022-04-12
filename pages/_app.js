@@ -2,8 +2,9 @@ import '../styles/globals.css';
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import NoscriptCode from '../components/NoscriptCode';
-import { wrapper, store } from "../store";
+import { store } from "../store";
 import { Provider } from 'react-redux';
+import { wrapper } from '../store'
 
 function MyApp({ Component, pageProps }) {
   return <>

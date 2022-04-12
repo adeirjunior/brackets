@@ -1,10 +1,6 @@
-import loggedReducer from "./isLogged";
-import counterReducer from "./counter";
-import { combineReducers } from 'redux';
+import { combineReducers } from 'redux'
+import postsReducer from './postsReducer'
 
-const allReducer = combineReducers({
-    counter: counterReducer,
-    logged: loggedReducer
+export default combineReducers({
+  postsList: postsReducer
 })
-
-export default allReducer;

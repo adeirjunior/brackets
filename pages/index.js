@@ -11,8 +11,8 @@ import { sortByDate } from '../utils';
 
 
 const Home = ({ posts }) => {
-  const postsFilter = posts.filter( post => post.frontmatter.programming_language === 'javascript' );
-  
+  const postsFilter = posts.filter( post => post.frontmatter.programming_language === '' );
+
   return (
     <>
       <Head>
