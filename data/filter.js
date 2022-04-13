@@ -6,24 +6,24 @@ import Svelte from '../public/filter-icons/Svelte-Icon';
 
 export const filterIcons = [
     {
-        alt: 'Javascript Icon',
-        Src: ({className}) => < Javascript className={className}/>,
+        type: 'javascript',
+        Src: ({className, onClick}) => < Javascript onClick={onClick} className={className}/>,
     },
     {
-        alt: 'React Icon',
-        Src: ({className}) => < React className={className}/>,
+        type: 'react',
+        Src: ({className, onClick}) => < React onClick={onClick} className={className}/>,
     },
     {
-        alt: 'Next Icon',
-        Src: ({className}) => < Next className={className}/>,
+        type: 'next',
+        Src: ({className, onClick}) => < Next onClick={onClick} className={className}/>,
     },
     {
-        alt: 'Angular Icon',
-        Src: ({className}) => < Angular className={className}/>,
+        type: 'angular',
+        Src: ({className, onClick}) => < Angular onClick={onClick} className={className}/>,
     },
     {
-        alt: 'Svelte Icon',
-        Src: ({className}) => < Svelte className={className}/>,
+        type: 'svelte',
+        Src: ({className, onClick}) => < Svelte onClick={onClick} className={className}/>,
     },
     
 ];

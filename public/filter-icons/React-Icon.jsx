@@ -1,7 +1,7 @@
 
-const React = ({className}) => {
+const React = ({className, onClick}) => {
     return (
-<svg width="38" className={className} height="37" viewBox="0 0 38 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="38" onClick={onClick} className={className} height="37" viewBox="0 0 38 37" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="19.3341" cy="18.5" r="18.5" fill="#1E1E1E"/>
 <g clipPath="url(#clip0_2_17)">
 <path d="M21.3456 18.4782C21.3456 19.5929 20.442 20.4965 19.3274 20.4965C18.2127 20.4965 17.3091 19.5929 17.3091 18.4782C17.3091 17.3636 18.2127 16.46 19.3274 16.46C20.442 16.46 21.3456 17.3636 21.3456 18.4782Z" fill="#F1F1F1"/>
