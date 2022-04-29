@@ -8,6 +8,25 @@ import { filterIcons } from '../../data/filter';
 import Cards from '../../components/posts/Cards';
 import { sortByDate } from '../../utils';
 import matter from 'gray-matter';
+import styled from 'styled-components';
+
+const Button = styled.button`
+padding: .5em 1em;
+background-color: #1C1C1C;
+position: relative;
+bottom: 2.5em;
+left: 7em;
+color: #F1F1F1;
+border-radius: .5em;
+font-weight: 600;
+text-transform: uppercase;
+user-select: none;
+
+&:hover{
+  color: #1C1C1C;
+  background-color: transparent;
+}
+`;
 
 const Posts = ({posts}) => {
   const toCamelCase = (str) => str.trim().replace(/[-_\s]+(.)?/g, (_, c) => (c ? c.toUpperCase() : ''));
@@ -33,7 +52,7 @@ const Posts = ({posts}) => {
         <div className="flex w-auto justify-center mb-14">
           <input value={search} onChange={ e => setSearch(e.target.value) } className="mt-12 w-60 sm:w-80 font-medium text-xs border-dark border border-solid rounded-md py-2 pl-6 pr-4 bg-light placeholder:text-dark focus:outline-none selection:bg-dark selection:text-light" type='text' placeholder="Search..." />
         </div>
-      <Link href="/">Home</Link>
+      <Link href="/"><Button>BACK</Button></Link>
       <section className='grid place-content-center px-4 gap-8 sm:grid-cols-2col lg:grid-cols-3col xl:grid-cols-4col'> 
       {
         postsFilter[0]?.frontmatter ? 

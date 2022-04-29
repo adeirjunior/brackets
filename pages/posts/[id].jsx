@@ -53,7 +53,7 @@ position: relative;
       font-size: 1.2rem;
       letter-spacing: .05em;
 
-      p::selection, h3::selection, strong::selection {
+      p::selection, h3::selection, h2::selection, code::selection, strong::selection {
         background-color: #1C1C1C;
         color: #F1F1F1;
       }
@@ -125,7 +125,7 @@ const Post = ({
         </Head>
         <PostStyle>
           <header>
-            <Link href="/" passHref><button>Back</button></Link>
+            <button onClick={() => history.back()}>Back</button>
             <h2>{title}</h2>
           </header>
           <section>
