@@ -99,6 +99,11 @@ position: relative;
     right: 0;
     font-weight: 500;
     bottom: -2.5em;
+
+    &::selection {
+      background-color: #1C1C1C;
+      color: #F1F1F1;
+    }
   }
 
 @media only screen and (max-width: 1000px) {

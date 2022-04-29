@@ -12,12 +12,14 @@ import { sortByDate } from '../utils';
 const Home = ({ posts, pathName }) => {
   const [type, setType] = useState('');
   const [search, setSearch] = useState('');
-  const postsFilter = posts.filter( post => post.frontmatter.programming_language === type );
+  const todayPosts = posts.filter( post => post.frontmatter.date === '02/01/2022');
+  const todayPostsFilter = todayPosts.filter( post => post.frontmatter.programming_language === type);
+  const yesterdayPosts = posts.filter( post => post.frontmatter.date === '04/10/2022');
+  const yesterdayPostsFilter = yesterdayPosts.filter( post => post.frontmatter.programming_language === type);
+  console.log(todayPostsFilter)
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=no" />
-        <link rel='icon' href='/bracketsIco.png' />
         <title>Brackets</title>
         <meta name="description" content="Helpful news about the programming world for smart devs" />
       </Head>
@@ -36,16 +38,36 @@ const Home = ({ posts, pathName }) => {
           <input value={search} onChange={ e => setSearch(e.target.value) } className="mt-12 w-60 sm:w-80 font-medium text-xs border-dark border border-solid rounded-md py-2 pl-6 pr-4 bg-light placeholder:text-dark focus:outline-none selection:bg-dark selection:text-light" type='text' placeholder="Search..." />
         </div>
         <h2 className='text-center mb-10 text-sm font-semibold selection:text-light selection:bg-dark'>Today News</h2>
-        <section className='grid place-content-center px-4 gap-8 sm:grid-cols-2col lg:grid-cols-3col xl:grid-cols-4col'>   
         {
-          postsFilter[0]?.frontmatter ? 
+          todayPosts[0]?.frontmatter ? 
           ( 
-            postsFilter.map((post, index) => <Cards pathName={pathName} key={index} post={post} />)
-          ) : 
-          (
-            posts.map((post, index) => <Cards pathName={pathName} key={index} post={post} />)
-          )
+            <section className='grid mb-10 place-content-center px-4 gap-8 sm:grid-cols-2col lg:grid-cols-3col xl:grid-cols-4col'>   
+            {
+              todayPostsFilter[0]?.frontmatter ? 
+              ( 
+                todayPostsFilter.map((post, index) => <Cards pathName={pathName} key={index} post={post} />)
+              ) :
+              (
+                todayPosts.map((post, index) => <Cards pathName={pathName} key={index} post={post} />)
+              )
+            }
+            </section>
+          ) 
+          : "Today wasn't news here yet"
         }
+        <section>
+          <h2 className='text-center mb-10 text-sm font-semibold selection:text-light selection:bg-dark'>Yesterday</h2>
+          <section className='grid place-content-center px-4 gap-8 sm:grid-cols-2col lg:grid-cols-3col xl:grid-cols-4col'>   
+          {
+            yesterdayPostsFilter[0]?.frontmatter ? 
+            ( 
+              yesterdayPostsFilter.map((post, index) => <Cards pathName={pathName} key={index} post={post} />)
+            ) : 
+            (
+              yesterdayPosts.map((post, index) => <Cards pathName={pathName} key={index} post={post} />)
+            )
+          }
+          </section>
         </section>
         <h2 className='text-center mt-10 text-sm font-semibold selection:text-light selection:bg-dark'><Link href="/posts" >Other News</Link></h2>
       </div>

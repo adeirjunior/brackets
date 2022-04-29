@@ -1,10 +1,11 @@
 ---
-title: 'React 18 Looks Really Nice'
-date: '04/10/2022'
-programming_language: 'react'
+title: 'Svelte Is Nice'
+date: '02/01/2021'
+programming_language: 'svelte'
 ---
+## Svelte Is Nice
 
-## React 18 Looks Really Nice
+`code`
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 

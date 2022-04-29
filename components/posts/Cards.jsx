@@ -3,8 +3,9 @@ import Javascript from '../../public/post-icons/Javascript';
 import React from '../../public/post-icons/React';
 import Next from '../../public/post-icons/Next';
 import Svelte from '../../public/post-icons/Svelte';
+import Angular from '../../public/post-icons/Angular';
 
-const Cards = ({ post, pathName }) => {
+const Cards = ({ post }) => {
     return (
         <Link passHref href={`/posts/${post.slug}`}>
             <div className="group w-52 sm:w-72 text-light cursor-pointer">
@@ -14,6 +15,7 @@ const Cards = ({ post, pathName }) => {
                     :post.frontmatter.programming_language === "next" ? (<Next className="transition-all duration-200 group-hover:scale-95" />)
                     :post.frontmatter.programming_language === "react" ? (<React className="transition-all duration-200 group-hover:scale-95" />)
                     :post.frontmatter.programming_language === "svelte" ? (<Svelte className="transition-all duration-200 group-hover:scale-95" />)
+                    :post.frontmatter.programming_language === "angular" ? (<Angular className="transition-all duration-200 group-hover:scale-95" />)
                     :""
                     }
                 </div>
