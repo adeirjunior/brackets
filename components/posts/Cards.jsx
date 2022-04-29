@@ -4,7 +4,7 @@ import React from '../../public/post-icons/React';
 import Next from '../../public/post-icons/Next';
 import Svelte from '../../public/post-icons/Svelte';
 
-const Cards = ({ post }) => {
+const Cards = ({ post, pathName }) => {
     return (
         <Link passHref href={`/posts/${post.slug}`}>
             <div className="group w-52 sm:w-72 text-light cursor-pointer">

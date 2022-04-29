@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Header from '../components/Header';
-import Search from '../components/filter/Search';
 import { filterIcons } from '../data/filter';
 import Cards from '../components/posts/Cards';
 import Link from 'next/link';
@@ -10,10 +9,10 @@ import { join } from 'path';
 import matter from 'gray-matter';
 import { sortByDate } from '../utils';
 
-const Home = ({ posts }) => {
-  const [type, setType] = useState () 
+const Home = ({ posts, pathName }) => {
+  const [type, setType] = useState('');
+  const [search, setSearch] = useState('');
   const postsFilter = posts.filter( post => post.frontmatter.programming_language === type );
-
   return (
     <>
       <Head>
@@ -28,23 +27,25 @@ const Home = ({ posts }) => {
         {
             filterIcons.map((FilterIcon, key) => {
               return (
-                <FilterIcon.Src onClick={() => {type === FilterIcon.type ? setType('') : setType(FilterIcon.type);}} className="cursor-pointer transition-all duration-200 active:opacity-75 active:scale-90 sm:w-11 h-auto" key={key} />
+                <FilterIcon.Src onClick={ () => { type === FilterIcon.type ? setType('') : setType(FilterIcon.type) } } className="cursor-pointer transition-all duration-200 active:opacity-75 active:scale-90 sm:w-11 h-auto" key={key} />
               )
             })
         }
         </nav>
-        <Search />
+        <div className="flex w-auto justify-center mb-14">
+          <input value={search} onChange={ e => setSearch(e.target.value) } className="mt-12 w-60 sm:w-80 font-medium text-xs border-dark border border-solid rounded-md py-2 pl-6 pr-4 bg-light placeholder:text-dark focus:outline-none selection:bg-dark selection:text-light" type='text' placeholder="Search..." />
+        </div>
         <h2 className='text-center mb-10 text-sm font-semibold selection:text-light selection:bg-dark'>Today News</h2>
         <section className='grid place-content-center px-4 gap-8 sm:grid-cols-2col lg:grid-cols-3col xl:grid-cols-4col'>   
         {
           postsFilter[0]?.frontmatter ? 
           ( 
-            postsFilter.map((post, index) => <Cards key={index} post={post} />)
+            postsFilter.map((post, index) => <Cards pathName={pathName} key={index} post={post} />)
           ) : 
           (
-            posts.map((post, index) => <Cards key={index} post={post} />)
+            posts.map((post, index) => <Cards pathName={pathName} key={index} post={post} />)
           )
-          }
+        }
         </section>
         <h2 className='text-center mt-10 text-sm font-semibold selection:text-light selection:bg-dark'><Link href="/posts" >Other News</Link></h2>
       </div>
@@ -71,7 +72,8 @@ export async function getStaticProps() {
   })
   return {
     props: {
-      posts: posts.sort(sortByDate)
+      posts: posts.sort(sortByDate),
+      pathName: 'posts'
     }
   }
 }

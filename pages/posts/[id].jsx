@@ -68,7 +68,7 @@ position: relative;
           margin-bottom: 1em;
         }
       }
-    }
+    
 
       pre {
         margin: 3em 0;
@@ -90,6 +90,7 @@ position: relative;
           word-wrap: break-word;
         }
       }
+    
     }
   }
   time {
@@ -106,7 +107,7 @@ position: relative;
     overflow-y: scroll;
   }
 }
-`
+`;
 
 const Post = ({
   frontmatter: { title, date },
