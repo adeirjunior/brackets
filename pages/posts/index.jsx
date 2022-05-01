@@ -14,7 +14,7 @@ const Button = styled.button`
 padding: .5em 1em;
 background-color: #1C1C1C;
 position: relative;
-bottom: 2.5em;
+bottom: 1.75em;
 left: 7em;
 color: #F1F1F1;
 border-radius: .5em;
@@ -25,6 +25,13 @@ user-select: none;
 &:hover{
   color: #1C1C1C;
   background-color: transparent;
+}
+
+@media only screen and (max-width:1024px) {
+  left: 3em;
+}
+@media only screen and (max-width:640px) {
+  left: 1em;
 }
 `;
 

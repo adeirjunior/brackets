@@ -53,10 +53,12 @@ const Home = ({ posts, pathName }) => {
             }
             </section>
           ) 
-          : "Today wasn't news here yet"
+          : (<p>Today wasn't news here yet</p>)
         }
-        <section>
-          <h2 className='text-center mb-10 text-sm font-semibold selection:text-light selection:bg-dark'>Yesterday</h2>
+        <h2 className='text-center mb-10 text-sm font-semibold selection:text-light selection:bg-dark'>Yesterday</h2>
+        {
+          todayPosts[0]?.frontmatter ? 
+          (
           <section className='grid place-content-center px-4 gap-8 sm:grid-cols-2col lg:grid-cols-3col xl:grid-cols-4col'>   
           {
             yesterdayPostsFilter[0]?.frontmatter ? 
@@ -68,8 +70,10 @@ const Home = ({ posts, pathName }) => {
             )
           }
           </section>
-        </section>
-        <h2 className='text-center mt-10 text-sm font-semibold selection:text-light selection:bg-dark'><Link href="/posts" >Other News</Link></h2>
+          )
+          : (<p>Yesterday wasn't news here</p>)   
+        }
+        <h2 className='text-center mt-10 text-sm font-semibold selection:text-light hover:underline selection:bg-dark'><Link href="/posts" >Other News</Link></h2>
       </div>
     </>
   )
