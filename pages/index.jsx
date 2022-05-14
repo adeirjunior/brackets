@@ -15,10 +15,9 @@ const Home = ({ posts, pathName }) => {
   const currentDate = new Date();
   const today = `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
   const todayPosts = posts.filter( post => post.frontmatter.date === today );
-  const todayPostsFilter = todayPosts.filter( post => post.frontmatter.programming_language === type);
+  const todayPostsFilter = todayPosts.filter( post => post.frontmatter.programming_language === search || type);
   const yesterdayPosts = posts.filter( post => post.frontmatter.date === '4/10/2022');
   const yesterdayPostsFilter = yesterdayPosts.filter( post => post.frontmatter.programming_language === type);
-  console.log(todayPostsFilter)
   return (
     <>
       <Head>
