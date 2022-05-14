@@ -31,7 +31,7 @@ user-select: none;
   left: 3em;
 }
 @media only screen and (max-width:640px) {
-  left: 1em;
+  justify-content: center;
 }
 `;
 

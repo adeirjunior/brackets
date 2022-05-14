@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import fs from 'fs';
 import { marked } from 'marked';
 import { join } from 'path';
@@ -122,6 +121,8 @@ const Post = ({
       <>
         <Head>
           <title>Brackets | {title}</title>
+          <meta name="description" content="tag" />
+          <link rel="canonical" href="https://yourwebsite.com/"/>
         </Head>
         <PostStyle>
           <header>
