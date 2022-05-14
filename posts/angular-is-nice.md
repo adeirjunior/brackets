@@ -1,6 +1,6 @@
 ---
 title: 'Angular Is Nice'
-date: '5/13/2022'
+date: '5/14/2022'
 programming_language: 'angular'
 ---
 ## Angular Is Nice
