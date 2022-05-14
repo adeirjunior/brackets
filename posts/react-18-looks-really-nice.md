@@ -1,6 +1,6 @@
 ---
 title: 'React 18 Looks Really Nice'
-date: '04/10/2022'
+date: '4/10/2022'
 programming_language: 'react'
 ---
 

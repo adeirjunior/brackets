@@ -1,6 +1,6 @@
 ---
 title: 'Next Shows Its Force'
-date: '04/30/2022'
+date: '4/30/2022'
 programming_language: 'next'
 ---
 

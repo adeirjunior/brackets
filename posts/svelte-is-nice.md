@@ -1,6 +1,6 @@
 ---
 title: 'Svelte Is Nice'
-date: '02/01/2021'
+date: '2/01/2021'
 programming_language: 'svelte'
 ---
 ## Svelte Is Nice

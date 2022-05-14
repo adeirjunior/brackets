@@ -12,9 +12,12 @@ import { sortByDate } from '../utils';
 const Home = ({ posts, pathName }) => {
   const [type, setType] = useState('');
   const [search, setSearch] = useState('');
-  const todayPosts = posts.filter( post => post.frontmatter.date === '02/01/2022');
+  const currentDate = new Date();
+  const today = `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
+  console.log(today);
+  const todayPosts = posts.filter( post => post.frontmatter.date === today );
   const todayPostsFilter = todayPosts.filter( post => post.frontmatter.programming_language === type);
-  const yesterdayPosts = posts.filter( post => post.frontmatter.date === '04/10/2022');
+  const yesterdayPosts = posts.filter( post => post.frontmatter.date === '4/10/2022');
   const yesterdayPostsFilter = yesterdayPosts.filter( post => post.frontmatter.programming_language === type);
   console.log(todayPostsFilter)
   return (
@@ -53,11 +56,11 @@ const Home = ({ posts, pathName }) => {
             }
             </section>
           ) 
-          : (<p>Today wasn't news here yet</p>)
+          : (<p className='flex justify-center mb-10 selection:text-light selection:bg-dark'>Today wasn't news here yet</p>)
         }
         <h2 className='text-center mb-10 text-sm font-semibold selection:text-light selection:bg-dark'>Yesterday</h2>
         {
-          todayPosts[0]?.frontmatter ? 
+          yesterdayPosts[0]?.frontmatter ? 
           (
           <section className='grid place-content-center px-4 gap-8 sm:grid-cols-2col lg:grid-cols-3col xl:grid-cols-4col'>   
           {
@@ -71,9 +74,9 @@ const Home = ({ posts, pathName }) => {
           }
           </section>
           )
-          : (<p>Yesterday wasn't news here</p>)   
+          : (<p className='flex justify-center mb-10 selection:text-light selection:bg-dark'>Yesterday wasn't news here</p>)   
         }
-        <h2 className='text-center mt-10 text-sm font-semibold selection:text-light hover:underline selection:bg-dark'><Link href="/posts" >Other News</Link></h2>
+        <div className='text-center mt-10 text-sm font-semibold selection:text-light hover:underline selection:bg-dark'><Link href="/posts" >Other News</Link></div>
       </div>
     </>
   )
